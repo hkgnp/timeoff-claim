@@ -1,5 +1,5 @@
 require("dotenv").config();
-const port = process.env.port || 8888;
+const port = process.env.PORT || 8888;
 
 const express = require("express");
 const helmet = require("helmet");
@@ -14,6 +14,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.set("view engine", "hbs");
+hbs.registerHelper("dateFormat", require("handlebars-dateformat"));
 wax.on(hbs.handlebars);
 wax.setLayoutPath("./views/layouts");
 

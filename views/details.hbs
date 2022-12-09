@@ -19,7 +19,7 @@
       <tbody>
         {{#each activities}}
           <tr>
-            <td>{{this.date}}</td>
+            <td>{{dateFormat this.date "ddd, Do MMM YYYY, h:mma"}}</td>
             <td>{{this.time}}</td>
             <td>{{this.ward}}</td>
             <td>{{this.bed}}</td>
@@ -40,7 +40,7 @@
       <tbody>
         {{#each claims}}
           <tr>
-            <td>{{this.date}}</td>
+            <td>{{dateFormat this.date "ddd, Do MMM YYYY, h:mma"}}</td>
             <td>{{this.hours}}</td>
           </tr>
         {{/each}}
