@@ -1,0 +1,28 @@
+{{#extends "base"}}
+  {{#block "title"}}Dashboard{{/block}}
+  {{#block "content"}}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Emp ID</th>
+          <th scope="col">Hours to Claim</th>
+          <th scope="col">#</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each employees}}
+          <tr>
+            <td>{{this.employeeId}}</td>
+            <td>{{this.hoursToClaim}}</td>
+            <td><a
+                class="btn btn-sm btn-primary"
+                href="/dashboard/{{this.employeeId}}"
+              >Details</a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{/block}}
+
+  {{#block "js"}}{{/block}}
+{{/extends}}

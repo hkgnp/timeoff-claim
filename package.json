@@ -1,0 +1,21 @@
+{
+  "name": "timeoff-claim",
+  "version": "0.0.1",
+  "author": "hkgnp",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --delay 500ms src/index.js"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "@opengovsg/formsg-sdk": "^0.9.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "helmet": "^6.0.1",
+    "mongodb": "^4.12.1",
+    "wax-on": "^1.2.2"
+  }
+}

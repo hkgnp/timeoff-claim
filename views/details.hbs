@@ -1,0 +1,52 @@
+{{#extends "base"}}
+
+  {{#block "title"}}{{details.employeeId}}{{/block}}
+
+  {{#block "content"}}
+    <a class="btn btn-success mb-3" href="/dashboard">Back</a>
+
+    <h3>Activity History</h3>
+    <table class="table mb-5">
+      <thead>
+        <tr>
+          <th scope="col">Date of Entry</th>
+          <th scope="col">Time of Encounter</th>
+          <th scope="col">Ward</th>
+          <th scope="col">Bed</th>
+          <th scope="col">No. of Hours</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each activities}}
+          <tr>
+            <td>{{this.date}}</td>
+            <td>{{this.time}}</td>
+            <td>{{this.ward}}</td>
+            <td>{{this.bed}}</td>
+            <td>{{this.hours}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+    <h3 class="mt-5">Claim History</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Date of Entry</th>
+          <th scope="col">Claimed</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each claims}}
+          <tr>
+            <td>{{this.date}}</td>
+            <td>{{this.hours}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+
+  {{/block}}
+
+{{/extends}}
